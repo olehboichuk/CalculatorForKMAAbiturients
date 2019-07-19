@@ -3,6 +3,9 @@
 
 body {
   overflow: hidden;
+  @include for-mini-phone {
+    overflow-y: scroll;
+  }
 }
 
 body:after {
@@ -195,6 +198,7 @@ form {
   align-self: center;
   font-family: "Exo 2", sans-serif;
   font-style: normal;
+  margin-left: 5px;
   /* font-weight: 600; */
   /* font-size: 28px; */
   /* line-height: 34px; */
@@ -210,6 +214,21 @@ input::-webkit-inner-spin-button {
 }
 
 .content {
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #F5F7FA;
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    margin: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #E0E6F0;
+    border-radius: 4px;
+  }
+}
+
+body {
   &::-webkit-scrollbar {
     width: 6px;
     background: #F5F7FA;
