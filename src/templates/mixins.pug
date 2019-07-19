@@ -1,0 +1,12 @@
+-const subjects = [{"name":"Історія України"},{"name":"Біологія"},{"name":"Математика"},{"name":"Іноземна мова"},{"name":"Хімія"},{"name":"Географія/Іноземна мова"},{"name":"Хімія/Іноземна мова"},{"name":"Історія України/Іноземна мова"},{"name":"Математика/Іноземна мова"},{"name":"Фізика/Іноземна мова"},{"name":"Хімія/Географія"},{"name":"Історія/Математика"},{"name":"Біологія/Іноземна мова"},{"name":"Історія/Географія"}];
+-const specialties = [{"name":"Біологія та біотехнологія","sec":"1","third":"5"},{"name":"Екологія","sec":"1","third":"10"},{"name":"Економіка","sec":"2","third":"5"},{"name":"Інженерія програмного забезпечення","sec":"2","third":"9"},{"name":"Історія та археологія","sec":"0","third":"5"},{"name":"Комп'ютерні науки","sec":"2","third":"9"},{"name":"Культурологія","sec":"0","third":"5"},{"name":"Маркетинг","sec":"2","third":"5"},{"name":"Менеджмент","sec":"2","third":"5"},{"name":"Міжнародні відносини","sec":"2","third":"11"},{"name":"Політологія","sec":"0","third":"8"},{"name":"Право","sec":"0","third":"8"},{"name":"Прикладна математика","sec":"2","third":"9"},{"name":"Психологія","sec":"2","third":"12"},{"name":"Соціальна робота","sec":"0","third":"8"},{"name":"Соціологія","sec":"2","third":"7"},{"name":"Фізика","sec":"2","third":"9"},{"name":"Філологія (Германські мови та літератури)","sec":"3","third":"13"},{"name":"Філологія (Українська мова та література)","sec":"3","third":"0"},{"name":"Філософія","sec":"0","third":"8"},{"name":"Фінанси, банківська справа та страхування","sec":"2","third":"5"},{"name":"Хімія","sec":"4","third":"8"}]
+mixin items()
+    select.form__input(id="speciality")
+        each nam in specialties
+            option=nam.name
+    p.change__form--text Введіть бал з Української мови
+    input.form__input(id="first" type="number" step="0.1" min="100" max="200" placeholder="100-200")
+    p.change__form--text--sec Введіть бал з Біології
+    input.form__input(id="second" type="number" step="0.1" min="100" max="200" placeholder="100-200")
+    p.change__form--text--third Введіть бал з Географії/Іноземної мови
+    input.form__input(id="third" type="number" step="0.1" min="100" max="200" placeholder="100-200")

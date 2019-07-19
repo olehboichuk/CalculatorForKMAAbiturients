@@ -1,0 +1,225 @@
+@import "reset";
+@import "mixins";
+
+body {
+  overflow: hidden;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: url(/img/kma.png) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: .2;
+  z-index: -1;
+  @include for-tablet-landscape-up {
+    background: url(/img/kma_for_tablet.png) no-repeat;
+    background-size: cover;
+  }
+  @include for-phone-only {
+    background: url(/img/kma_for_phone.png) no-repeat;
+    background-size: cover;
+  }
+  @include for-mini-phone {
+    background: url(/img/kma_for_miniphone.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__text {
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 34px;
+  letter-spacing: 0.4px;
+
+  color: #002396;
+}
+
+.calculator {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  @include for-tablet-landscape-up {
+    width: 70%;
+  }
+  @include for-phone-only {
+    width: 80%;
+  }
+  @include for-mini-phone {
+    width: 95%;
+  }
+}
+
+.content {
+  margin-top: 60px;
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  opacity: 0.8;
+  box-shadow: 0px 5px 40px rgba(0, 45, 113, 0.06);
+  border-radius: 10px;
+  @include for-tablet-landscape-up {
+    width: 70%;
+  }
+  @include for-phone-only {
+    margin-top: 10px;
+    width: 80%;
+    overflow-y: scroll;
+  }
+  @include for-mini-phone {
+    margin-top: 10px;
+    width: 95%;
+  }
+}
+
+form {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  @include for-tablet-landscape-up {
+    width: 70%;
+  }
+  @include for-phone-only {
+    width: 80%;
+  }
+  @include for-mini-phone {
+    width: 95%;
+  }
+}
+
+.form__input {
+  background-color: #FCFCFC;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  height: 40px;
+  padding-left: 14px;
+  margin-bottom: 24px;
+  border: 2px solid #F2F2F2;
+  border-radius: 2px;
+  outline: none;
+}
+
+.form__input:focus {
+  background-color: #fff;
+  border-left: 2px solid #2A74DB;
+}
+
+.form__headline {
+  display: flex;
+  justify-content: center;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.4px;
+  color: #002396;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  @include for-mini-phone {
+    margin-bottom: 5px;
+  }
+}
+
+.form__help {
+  align-self: flex-end;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  margin-top: -10px;
+  color: #222428;
+}
+
+.form__input::placeholder {
+  color: rgba(135, 144, 167, 0.57);
+}
+
+.form__button {
+  align-self: flex-start;
+  width: 47%;
+  height: 42px;
+  background-color: #0AD69C;
+  font-size: 16px;
+  font-family: "Exo 2", sans-serif;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.change__form--text, .change__form--text--sec, .change__form--text--third {
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #546087;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.result__text {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-family: "Exo 2", sans-serif;
+  font-style: normal;
+  /* font-weight: 600; */
+  /* font-size: 28px; */
+  /* line-height: 34px; */
+  /* letter-spacing: .4px; */
+  color: #002396;
+  /* margin-bottom: 25px; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.content {
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #F5F7FA;
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    margin: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #E0E6F0;
+    border-radius: 4px;
+  }
+}

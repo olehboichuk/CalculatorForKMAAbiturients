@@ -1,0 +1,12 @@
+include mixins
+main
+    .content
+        form.calculator
+            p.form__headline KMA calculator
+            p.change__form--text Виберіть спеціальність
+            +items()
+            p.change__form--text Введіть середній бал атестата
+            input.form__input(id="atestat" type="number" step="0.1" min="1" max="12" placeholder="1-12")
+            .result
+                button.form__button(type="button") перевести
+                p.result__text Ваш середній бал ...
