@@ -86,7 +86,6 @@ header {
   @include for-phone-only {
     margin-top: 10px;
     width: 80%;
-    overflow-y: scroll;
   }
   @include for-mini-phone {
     margin-top: 10px;
@@ -211,21 +210,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.content {
-  &::-webkit-scrollbar {
-    width: 6px;
-    background: #F5F7FA;
-    mix-blend-mode: normal;
-    border-radius: 4px;
-    margin: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #E0E6F0;
-    border-radius: 4px;
-  }
 }
 
 body {
